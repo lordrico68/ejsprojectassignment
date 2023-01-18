@@ -1,0 +1,21 @@
+<%- include("layout/header") %>
+
+    <main>
+        <form action="/" method="post">
+            <input type="text" placeholder="Enter a subject" 
+             name="subject"
+            >
+            <button type="submit" class="btn">Add Subject</button>
+        </form>
+
+        <ul>
+            <% if (schools.length > 0){%>
+                <% for(let i = 0; i < schools.length; i++){ %>
+                    <li><%= schools[i] %></li>
+                    <% } %>
+                    <% }else{%>
+                        <p class="txt">No subject available</p>
+                        <% } %>
+        </ul>
+    </main>
+    <%- include("layout/footer") %>
